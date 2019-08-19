@@ -9,14 +9,9 @@
 import Foundation
 import UIKit
 
-struct Logic {
+protocol Logic {
+    
+    func getFontSize(value: CGFloat)
     
     
-
-
-    static func getValue(slider: CGFloat) -> CGFloat{
-    let value = slider
-    return value
-}
-
 }

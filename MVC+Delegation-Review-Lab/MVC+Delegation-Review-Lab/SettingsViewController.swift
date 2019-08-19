@@ -9,8 +9,14 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+ 
     
-    var size: CGFloat = 0.5
+    var delegate: Logic?
+    
+
+
+    
+//    var size: CGFloat = 0.5
 //    varlabel.font = UIFont(name: varlabel.font.fontName, size: senderValue)
     
     //make a computed property????
@@ -29,12 +35,14 @@ class SettingsViewController: UIViewController {
     @IBAction func sliderAction(_ sender: UISlider) {
     editLabel.font = editLabel.font.withSize(CGFloat(sender.value))
         stepperOut.value = Double(sender.value)
-    
+        delegate?.getFontSize(value: CGFloat(sender.value))
     }
     
     @IBAction func stepperAction(_ sender: UIStepper) {
         editLabel.font = editLabel.font.withSize(CGFloat(Double(sender.value)))
         sliderOut.value = Float(sender.value)
+        delegate?.getFontSize(value: CGFloat(sender.value))
+        
         
         
     }
