@@ -31,9 +31,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = movies[indexPath.row].name
         
         cell.detailTextLabel?.text = String(movies[indexPath.row].year)
-        
-      cell.textLabel!.font = cell.textLabel?.font.withSize(currentSize)
-      cell.detailTextLabel!.font = cell.detailTextLabel?.font.withSize(currentSize - 5.0)
+        cell.textLabel!.font = cell.textLabel?.font.withSize(currentSize)
+        cell.detailTextLabel!.font = cell.detailTextLabel?.font.withSize(currentSize - 5.0)
        return cell
     }
     
