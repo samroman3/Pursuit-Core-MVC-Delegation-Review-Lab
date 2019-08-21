@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, Logic {
+    
     var currentSize: CGFloat = 17
     func getFontSize(value: CGFloat) {
         currentSize = value
@@ -44,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SettingsViewController {
             destination.delegate = self
-            
+            destination.setSize = currentSize
             
         }
     }

@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     
     var delegate: Logic?
     
-
+    var setSize: CGFloat!
 
     
 //    var size: CGFloat = 0.5
@@ -51,6 +51,9 @@ class SettingsViewController: UIViewController {
     
 
     override func viewDidLoad() {
+        sliderOut.value = Float(setSize)
+        stepperOut.value = Double(setSize)
+        editLabel.font = editLabel.font.withSize(setSize)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
